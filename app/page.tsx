@@ -1,4 +1,11 @@
-import { ArrowRight, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  MicVocal,
+  PlayCircle,
+  Sparkles,
+  TentTree,
+  UsersRound,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedContent from "@/components/AnimatedContent";
@@ -65,30 +72,35 @@ const supports = [
 const events = [
   {
     tag: "Conférence",
+    icon: MicVocal,
     title: "REVEL — Le pouvoir du premier mouvement",
     description:
       "Une expérience immersive mêlant témoignages, musique, émotion et prises de conscience pour retrouver son pouvoir d’action et initier un changement durable.",
   },
   {
     tag: "Live",
+    icon: PlayCircle,
     title: "Et si le véritable leadership commençait par soi ?",
     description:
       "Un échange en direct avec Laila Tazi autour du Personal Power™, de la posture et des choix qui permettent de devenir pleinement le leader de sa propre vie.",
   },
   {
     tag: "Masterclass",
+    icon: Sparkles,
     title: "Aligner sa posture, sa voix et sa voie",
     description:
       "Une masterclass pour mieux comprendre son positionnement, exprimer sa voix avec confiance et donner une direction plus claire à son parcours personnel ou professionnel.",
   },
   {
     tag: "Voyage",
+    icon: TentTree,
     title: "SELMER — Revenir à l’essentiel",
     description:
       "Une expérience en petit groupe pensée pour ralentir, se reconnecter à soi et retrouver de la clarté grâce au voyage, au partage et à la nature.",
   },
   {
     tag: "Atelier",
+    icon: UsersRound,
     title: "Leadership vivant — Remettre les équipes en mouvement",
     description:
       "Un atelier destiné aux dirigeants et aux équipes pour renforcer la posture de leadership, améliorer la qualité du lien et favoriser une dynamique collective plus engagée.",
@@ -499,28 +511,37 @@ export default function Home() {
             text="Des expériences pour se mettre en mouvement, rencontrer, ressentir et faire émerger de nouvelles possibilités."
           />
           <div className="mx-auto mt-14 grid max-w-7xl gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {events.map((event, index) => (
-              <article
-                key={event.title}
-                className={`flex min-h-72 flex-col rounded-lg border border-[#dfd4c2] bg-white p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#be6b41]/10 ${index === 0 ? "xl:col-span-2" : ""}`}
-              >
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#be6b41]">
-                  {event.tag}
-                </p>
-                <h3 className="mt-5 text-2xl font-semibold leading-tight">
-                  {event.title}
-                </h3>
-                <p className="mt-4 leading-7 text-[#5f5850]">
-                  {event.description}
-                </p>
-                <Link
-                  href="#contact"
-                  className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-bold"
+            {events.map((event, index) => {
+              const EventIcon = event.icon;
+
+              return (
+                <article
+                  key={event.title}
+                  className={`flex min-h-72 flex-col rounded-lg border border-[#dfd4c2] bg-white p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#be6b41]/10 ${index === 0 ? "xl:col-span-2" : ""}`}
                 >
-                  Être informé(e) <ArrowRight className="size-4" />
-                </Link>
-              </article>
-            ))}
+                  <div className="flex items-center justify-between gap-4">
+                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#be6b41]">
+                      {event.tag}
+                    </p>
+                    <span className="grid size-11 place-items-center rounded-full bg-[#f8f4ec] text-[#be6b41]">
+                      <EventIcon className="size-5" aria-hidden="true" />
+                    </span>
+                  </div>
+                  <h3 className="mt-5 text-2xl font-semibold leading-tight">
+                    {event.title}
+                  </h3>
+                  <p className="mt-4 leading-7 text-[#5f5850]">
+                    {event.description}
+                  </p>
+                  <Link
+                    href="#contact"
+                    className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-bold"
+                  >
+                    Être informé(e) <ArrowRight className="size-4" />
+                  </Link>
+                </article>
+              );
+            })}
           </div>
         </AnimatedContent>
       </section>
@@ -692,7 +713,14 @@ export default function Home() {
           threshold={0.12}
         >
           <div>
-            <h2 className="text-xl font-bold tracking-[0.24em]">LAILA TAZI</h2>
+            <Image
+              src="/logo.webp"
+              alt="YALLAH À LA VIE"
+              width={250}
+              height={250}
+              priority
+              className="size-36 object-contain"
+            />
             <p className="mt-5 text-white/66">
               La vie répond au mouvement.
               <br />
@@ -719,11 +747,53 @@ export default function Home() {
               <input
                 type="email"
                 placeholder="Votre adresse e-mail"
-                className="min-w-0 flex-1 px-5 text-sm text-[#171412] outline-none"
+                className="min-w-0 flex-1 h-12 px-5 text-sm text-[#171412] outline-none"
               />
               <button className="bg-[#e7b85f] px-5 text-sm font-bold text-[#171412]">
                 Je m’inscris
               </button>
+            </div>
+            <h3 className="mt-7 font-semibold">Suivre Laila Tazi</h3>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a
+                href="https://www.instagram.com/lailatazi_?igsh=N3p0NTByMW02NzRj"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-transparent py-2 text-sm font-semibold  transition"
+              >
+                <Image
+                  src={"/media/instagram.png"}
+                  alt=""
+                  width={25}
+                  height={25}
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/laïla-tazi-bb539993?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-transparent py-2 text-sm font-semibold  transition"
+              >
+                <Image
+                  src={"/media/linkedin.png"}
+                  alt=""
+                  width={25}
+                  height={25}
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/share/18zDLvEpuS/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-transparent py-2 text-sm font-semibold  transition"
+              >
+                <Image
+                  src={"/media/facebook.png"}
+                  alt=""
+                  width={25}
+                  height={25}
+                />
+              </a>
             </div>
           </div>
         </AnimatedContent>
