@@ -1,4 +1,6 @@
 import { ArrowRight, Sparkles } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import AnimatedContent from "@/components/AnimatedContent";
 import {
   Accordion,
@@ -12,64 +14,84 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import Image from "next/image";
-import Link from "next/link";
 
 const navItems = [
   ["Accueil", "#accueil"],
-  ["La philosophie", "#philosophie"],
   ["Laila Tazi", "#laila-tazi"],
-  ["Nos expériences ▾", "#experiences"],
-  ["Notre écosystème", "#ecosysteme"],
-  // ["REVEL", "#revel"],
-  // ["SELMER", "#selmer"],
+  ["Sa vision", "#vision"],
+  ["Accompagnements", "#accompagnements"],
+  ["Expériences", "#experiences"],
   ["Témoignages", "#temoignages"],
-  ["Revue de presse", "#presse"],
-  ["Blog", "#blog"],
-  ["FAQ", "#faq"],
-];
-
-const footerNavItems = [
-  ["La philosophie", "#philosophie"],
-  ["Laila Tazi", "#laila-tazi"],
-  ["Notre écosystème", "#ecosysteme"],
-  ["Témoignages", "#temoignages"],
-  ["Revue de presse", "#presse"],
-  ["Blog", "#blog"],
-  ["FAQ", "#faq"],
+  ["Médias", "#medias"],
+  ["Agenda", "#agenda"],
   ["Contact", "#contact"],
 ];
 
-const principles = [
-  "La vie répond au mouvement",
-  "Le lien remet la vie en mouvement",
-  "Chacun est le leader de sa propre vie",
-];
+const footerNavItems = navItems.slice(1);
 
-const experiences = [
+const principles = ["Bouge-toi", "Guéris-toi", "Révèle-toi"];
+
+const supports = [
   {
     name: "REVEL",
-    eyebrow: "REVEL",
-    title:
-      "L’ère des conférences est terminée. L’ère des expériences commence.",
-    text: [
-      "REVEL est né de la conviction que le format traditionnel de la conférence ne suffit plus à provoquer une véritable transformation. Plus qu’un moment de transmission, chaque rencontre est pensée comme une expérience immersive dans laquelle le public devient pleinement acteur",
-      "Chaque édition réunit des personnalités inspirantes, des entrepreneurs, des artistes et des experts qui partagent leur parcours avec authenticité. L’objectif n’est pas seulement de transmettre des connaissances, mais de permettre à chacun de retrouver son pouvoir d’action et de révéler le leader qui sommeille en lui.",
-    ],
+    subtitle: "Conférences immersives",
+    text: "Pour vivre la puissance du collectif, rencontrer des parcours inspirants et transformer une prise de conscience en mouvement.",
+    action: "Découvrir REVEL",
     image: "/assets/PHOTOS SECTIONS/6.webp",
   },
   {
     name: "SELMER",
-    eyebrow: "SELMER",
-    title:
-      "Certains voyages nous montrent le monde. D’autres nous révèlent à nous-mêmes.",
-    text: [
-      "SELMER fait du voyage un temps de reconnexion à soi, aux autres et à la nature. Chaque expérience est pensée comme un véritable levier de transformation personnelle.",
-      "SELMER propose aujourd’hui deux formats complémentaires.",
-      "SELMER Group rassemble de petits groupes dans des voyages transformationnels où la dynamique collective favorise les prises de conscience et les changements durables.",
-      "SELMER One to One offre une expérience entièrement personnalisée qui associe voyage, leadership, stratégie, posture, communication et accompagnement d’exception grâce à un écosystème de partenaires experts.",
-    ],
+    subtitle: "Voyager autrement",
+    text: "Pour ralentir, se reconnecter à soi, retrouver de la clarté et vivre le voyage comme une expérience de transformation.",
+    action: "Découvrir SELMER",
     image: "/assets/PHOTOS SECTIONS/7.webp",
+  },
+  {
+    name: "ENTREPRISES",
+    subtitle: "Leadership et transformation humaine",
+    text: "Pour accompagner les dirigeants, les équipes et les organisations autour de la posture, du leadership, du lien, de la communication et de la transformation humaine.",
+    action: "Organiser une intervention",
+    image: "/assets/PHOTOS SECTIONS/8.webp",
+  },
+  {
+    name: "LEADER ONE",
+    subtitle: "Personal Branding & Personal Power",
+    text: "Une alliance entre l’expertise de Nawal Houti en Personal Branding et l’approche de Laila Tazi autour du Personal Power™. Un accompagnement pour aligner image, posture, voix, message et impact.",
+    action: "Découvrir Leader One",
+    image: "/assets/PHOTOS SECTIONS/9.webp",
+  },
+];
+
+const events = [
+  {
+    tag: "Conférence",
+    title: "REVEL — Le pouvoir du premier mouvement",
+    description:
+      "Une expérience immersive mêlant témoignages, musique, émotion et prises de conscience pour retrouver son pouvoir d’action et initier un changement durable.",
+  },
+  {
+    tag: "Live",
+    title: "Et si le véritable leadership commençait par soi ?",
+    description:
+      "Un échange en direct avec Laila Tazi autour du Personal Power™, de la posture et des choix qui permettent de devenir pleinement le leader de sa propre vie.",
+  },
+  {
+    tag: "Masterclass",
+    title: "Aligner sa posture, sa voix et sa voie",
+    description:
+      "Une masterclass pour mieux comprendre son positionnement, exprimer sa voix avec confiance et donner une direction plus claire à son parcours personnel ou professionnel.",
+  },
+  {
+    tag: "Voyage",
+    title: "SELMER — Revenir à l’essentiel",
+    description:
+      "Une expérience en petit groupe pensée pour ralentir, se reconnecter à soi et retrouver de la clarté grâce au voyage, au partage et à la nature.",
+  },
+  {
+    tag: "Atelier",
+    title: "Leadership vivant — Remettre les équipes en mouvement",
+    description:
+      "Un atelier destiné aux dirigeants et aux équipes pour renforcer la posture de leadership, améliorer la qualité du lien et favoriser une dynamique collective plus engagée.",
   },
 ];
 
@@ -91,62 +113,35 @@ const testimonials = [
   },
 ];
 
-const blogPosts = [
-  {
-    category: "YALLAH À LA VIE",
-    title: "Le Pas Magique : ce premier mouvement qui peut tout changer",
-    excerpt:
-      "Une décision, une prise de conscience ou un simple premier pas peut parfois ouvrir une nouvelle trajectoire.",
-  },
-  {
-    category: "Leadership",
-    title: "Et si le véritable leadership commençait par soi ?",
-    excerpt:
-      "Avant de guider les autres, il est essentiel d’apprendre à écouter son élan intérieur et à devenir le leader de sa propre vie.",
-  },
-  {
-    category: "Voyage",
-    title: "Quand le voyage devient une rencontre avec soi",
-    excerpt:
-      "Certains voyages nous montrent le monde. D’autres nous invitent à ralentir, à nous reconnecter et à nous redécouvrir.",
-  },
-];
-
-const faqs = [
-  [
-    "Qu’est-ce que YALLAH À LA VIE ?",
-    "YALLAH À LA VIE est une théorie contemporaine du mouvement vivant, fondée sur une conviction simple : toute transformation durable commence par un mouvement intérieur.",
-  ],
-  [
-    "YALLAH À LA VIE est-elle une méthode de coaching ?",
-    "Non. Il ne s’agit ni d’un slogan ni d’une méthode, mais d’une manière d’habiter pleinement sa vie et de retrouver son pouvoir d’action.",
-  ],
-  [
-    "Quelle est la différence entre REVEL et SELMER ?",
-    "REVEL propose des conférences immersives où la parole, la musique, le mouvement et l’émotion se rencontrent. SELMER transforme le voyage en une expérience de reconnexion et de transformation personnelle.",
-  ],
-  [
-    "Quels sont les formats proposés par SELMER ?",
-    "SELMER Group réunit de petits groupes autour d’un voyage transformationnel. SELMER One to One propose une expérience entièrement personnalisée, adaptée à votre parcours et à vos objectifs.",
-  ],
-  [
-    "Comment choisir entre REVEL et SELMER ?",
-    "Choisissez REVEL si vous recherchez l’énergie du collectif et une expérience immersive. SELMER est plus adapté si vous souhaitez vivre une expérience de voyage plus intime, en groupe restreint ou en accompagnement personnalisé.",
-  ],
-  [
-    "Comment obtenir plus d’informations ?",
-    "Remplissez le formulaire de contact en précisant l’expérience qui vous intéresse. L’équipe vous recontactera avec les informations adaptées à votre demande.",
-  ],
-  [
-    "Proposez-vous des expériences pour les entreprises ou les institutions ?",
-    "Oui, la vision de Laila Tazi s’adresse également aux entreprises, écoles et institutions. Contactez l’équipe afin d’échanger sur votre besoin.",
-  ],
-];
-
 const pressImages = Array.from({ length: 8 }, (_, index) => ({
   src: `/assets/PHOTOS PRESSE/${index + 1}.webp`,
   alt: `Article de presse ${index + 1}`,
 }));
+
+const requestChoices = [
+  "Participer à une conférence REVEL",
+  "Candidater à un voyage SELMER",
+  "Découvrir SELMER One to One",
+  "Candidater à Leader One",
+  "Organiser une intervention en entreprise",
+  "Proposer une collaboration ou une interview",
+  "Autre demande",
+];
+
+const faqs = [
+  [
+    "Qu’est-ce que le Personal Power™ ?",
+    "Le Personal Power™ désigne la capacité à reprendre pleinement sa place, à exprimer ce qui nous anime et à donner une direction consciente à notre vie.",
+  ],
+  [
+    "Quelle est la différence entre REVEL et SELMER ?",
+    "REVEL propose des conférences immersives portées par la force du collectif. SELMER transforme le voyage en une expérience intime de reconnexion et de transformation personnelle.",
+  ],
+  [
+    "À qui s’adressent les accompagnements ?",
+    "Aux personnes, leaders, entrepreneurs, équipes et organisations qui souhaitent remettre du mouvement, de la clarté et de l’alignement dans leur parcours.",
+  ],
+];
 
 function SectionHeading({
   eyebrow,
@@ -183,7 +178,7 @@ export default function Home() {
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between rounded-full border border-white/80 bg-white/95 px-4 shadow-2xl shadow-sky-950/15 backdrop-blur-xl lg:px-5">
           <Link
             href="#accueil"
-            className="flex min-w-0 items-center gap-3 rounded-full pr-2 transition hover:bg-sky-50"
+            className="flex min-w-0 items-center rounded-full pr-2 transition hover:bg-sky-50"
           >
             <Image
               src="/logo.webp"
@@ -194,13 +189,13 @@ export default function Home() {
               className="size-14 object-contain"
             />
           </Link>
-          <NavigationMenu className="hidden flex-none rounded-full bg-white px-3 py-2 text-[#333333] lg:flex">
+          <NavigationMenu className="hidden flex-none rounded-full bg-white px-3 py-2 text-[#333333] xl:flex">
             <NavigationMenuList className="gap-1">
               {navItems.map(([label, href]) => (
                 <NavigationMenuItem key={href}>
                   <NavigationMenuLink
                     href={href}
-                    className="rounded-full px-3 py-2 text-sm font-medium text-[#333333] hover:bg-sky-50 hover:text-[#171412] focus:bg-sky-50 focus:text-[#171412]"
+                    className="rounded-full px-2.5 py-2 text-sm font-medium text-[#333333] hover:bg-sky-50 hover:text-[#171412] focus:bg-sky-50 focus:text-[#171412]"
                   >
                     {label}
                   </NavigationMenuLink>
@@ -208,13 +203,19 @@ export default function Home() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
+          <Link
+            href="#contact"
+            className="rounded-full bg-[#171412] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#be6b41] sm:text-sm"
+          >
+            Prendre contact
+          </Link>
         </nav>
       </header>
 
       <section
         id="accueil"
-        style={{ backgroundImage: `url("/hero.png")` }}
-        className="relative flex min-h-[92vh] items-end overflow-hidden bg-sky-100 px-5 pb-16 pt-32 text-[#171412] md:min-h-screen md:pb-24 lg:items-center lg:px-12 xl:px-20"
+        style={{ backgroundImage: 'url("/hero.png")' }}
+        className="relative flex min-h-[92vh] items-end overflow-hidden bg-sky-100 bg-cover bg-center px-5 pb-16 pt-32 text-[#171412] md:min-h-screen md:pb-24 lg:items-center lg:px-12 xl:px-20"
       >
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(224,242,254,0.96)_0%,rgba(224,242,254,0.76)_34%,rgba(224,242,254,0.24)_62%,rgba(224,242,254,0.02)_100%)]" />
         <AnimatedContent
@@ -225,30 +226,43 @@ export default function Home() {
           delay={0.15}
         >
           <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-300/70 bg-white/70 px-4 py-2 text-sm font-semibold text-[#2f596c] shadow-xl shadow-sky-900/5 backdrop-blur">
-            <Sparkles className="size-4 text-[#be6b41]" />
-            Le leader de ta vie, c’est toi.
+            <Sparkles className="size-4 text-[#be6b41]" /> Le leader de ta vie,
+            c’est toi.
           </p>
-          <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] md:text-7xl lg:text-7xl">
+          <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] md:text-7xl">
             La vie répond au mouvement.
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-[#35515d]">
-            Une théorie contemporaine du mouvement vivant, incarnée par REVEL —
-            les conférences immersives — et SELMER — les voyages
-            transformateurs. Une invitation à retrouver votre élan et à devenir
-            pleinement le leader de votre propre vie.
+            Laila Tazi crée des expériences immersives et des accompagnements
+            transformateurs qui remettent la vie en mouvement.
           </p>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-[#35515d]">
+            Elle accompagne celles et ceux qui sont prêts à développer leur
+            Personal Power™, afin d’incarner un leadership plus libre, plus
+            aligné, plus charismatique et porteur de sens.
+          </p>
+          <Link
+            href="#accompagnements"
+            className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#171412] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#be6b41]"
+          >
+            Découvrir les accompagnements <ArrowRight className="size-4" />
+          </Link>
         </AnimatedContent>
       </section>
 
-      <section id="philosophie" className="px-5 py-24 md:py-32">
+      <section id="vision" className="px-5 py-24 md:py-32">
         <AnimatedContent distance={46} duration={0.8} threshold={0.2}>
           <SectionHeading
-            eyebrow="La philosophie"
-            title="YALLAH À LA VIE — Une manière d’habiter sa vie"
-            text="YALLAH À LA VIE n’est ni un slogan ni une méthode. C’est une théorie contemporaine du mouvement vivant, fondée sur une conviction simple : toute transformation durable commence par un mouvement intérieur avant de se manifester à l’extérieur. Ce mouvement peut prendre la forme d’une décision, d’une prise de conscience, d’une autorisation que l’on s’accorde ou simplement d’un premier pas."
+            eyebrow="Sa vision"
+            title="Trois invitations à remettre la vie en mouvement"
           />
         </AnimatedContent>
-        <AnimatedContent distance={34} duration={0.85} threshold={0.16} delay={0.1}>
+        <AnimatedContent
+          distance={34}
+          duration={0.85}
+          threshold={0.16}
+          delay={0.1}
+        >
           <div className="mx-auto mt-14 grid max-w-6xl gap-4 md:grid-cols-3">
             {principles.map((principle, index) => (
               <div
@@ -267,7 +281,67 @@ export default function Home() {
         </AnimatedContent>
       </section>
 
-      <section id="laila-tazi" className="bg-white px-5 py-24 md:py-32">
+      <section id="personal-power" className="bg-white px-5 py-24 md:py-32">
+        <AnimatedContent
+          className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1fr] lg:items-center"
+          distance={50}
+          duration={0.85}
+          threshold={0.18}
+        >
+          <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-[#ddd0bd]">
+            <Image
+              src="/assets/PHOTOS SECTIONS/1.webp"
+              alt="Une expérience Laila Tazi"
+              fill
+              sizes="(min-width: 1024px) 42vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#be6b41]">
+              Personal Power™
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
+              Développez votre Personal Power
+            </h2>
+            <p className="mt-6 text-xl leading-8 text-[#5f5850]">
+              Alignez votre posture. Libérez vos freins. Clarifiez votre voix et
+              votre voie. Le mouvement suivra.
+            </p>
+            <p className="mt-6 leading-8 text-[#5f5850]">
+              Le Personal Power™ désigne la capacité à reprendre pleinement sa
+              place, à exprimer ce qui nous anime et à donner une direction
+              consciente à notre vie. Cette approche repose sur trois dimensions
+              complémentaires.
+            </p>
+            <div className="mt-8 grid gap-5 sm:grid-cols-3">
+              {[
+                [
+                  "La posture",
+                  "La manière dont j’habite mon corps, mes émotions, mon énergie et ma présence.",
+                ],
+                [
+                  "La voix",
+                  "La manière dont j’exprime ma vérité, affirme mon message et crée le lien avec les autres.",
+                ],
+                [
+                  "La voie",
+                  "La direction que je choisis de donner à ma vie, à mes décisions et à mon impact.",
+                ],
+              ].map(([title, text]) => (
+                <div key={title} className="border-l-2 border-[#be6b41] pl-4">
+                  <h3 className="font-semibold">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-[#5f5850]">
+                    {text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedContent>
+      </section>
+
+      <section id="laila-tazi" className="px-5 py-24 md:py-32">
         <AnimatedContent
           className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1fr] lg:items-center"
           distance={50}
@@ -288,68 +362,37 @@ export default function Home() {
               Laila Tazi
             </p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
-              Une femme, une vision, une mission
+              Qui est Laila Tazi ?
             </h2>
-            <div className="mt-9 grid gap-7 text-[#5f5850]">
-              <div>
-                <h3 className="text-xl font-semibold text-[#171412]">
-                  De l’excellence à la quête de sens
-                </h3>
-                <p className="mt-3 leading-8">
-                  Après plusieurs années au sein d’Estée Lauder – Clinique
-                  France, Laila Tazi évolue dans un univers où l’excellence, le
-                  leadership et la performance sont au cœur du quotidien. Elle
-                  accompagne des équipes, révèle des talents et découvre combien
-                  la beauté peut renforcer la confiance et l’accomplissement. Sa
-                  quête de sens l’amène ensuite à explorer différentes approches
-                  du développement humain et à fonder l’un des premiers centres
-                  holistiques au Maroc.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-[#171412]">
-                  Une épreuve devenue une mission
-                </h3>
-                <p className="mt-3 leading-8">
-                  Une crise cardiaque, suivie d’une expérience de mort
-                  imminente, bouleverse profondément ses certitudes et
-                  transforme sa manière de vivre. Laila comprend alors que la
-                  réussite ne prend tout son sens que lorsqu’elle reste
-                  connectée à notre essence. De cette traversée naît la
-                  conviction qui guide désormais son œuvre : le changement
-                  commence par un mouvement intérieur et chacun peut devenir
-                  pleinement le leader de sa propre vie.
-                </p>
-              </div>
+            <div className="mt-8 grid gap-5 leading-8 text-[#5f5850]">
+              <p>
+                Riche d’une expérience dans l’univers de la cosmétique du luxe
+                et de la croissance de l’être, Laila Tazi est une conférencière
+                phare et activatrice de transformation.
+              </p>
+              <p>
+                Fondatrice de YALLAH À LA VIE, elle accompagne celles et ceux
+                qui souhaitent remettre leur vie en mouvement et devenir le
+                leader de leur vie.
+              </p>
+              <p>
+                Une femme qui a cheminé, connu la performance, la réussite, les
+                paillettes, puis le stop et le travail intérieur.
+              </p>
             </div>
-          </div>
-        </AnimatedContent>
-      </section>
-
-      <section id="ecosysteme" className="px-5 py-24 md:py-32">
-        <AnimatedContent
-          className="mx-auto max-w-7xl"
-          distance={48}
-          duration={0.8}
-          threshold={0.18}
-        >
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1fr] lg:items-end">
-            <SectionHeading
-              eyebrow="Notre écosystème"
-              title="Une théorie, deux expériences, une mission"
-              text="YALLAH À LA VIE constitue le socle de la vision. REVEL en est l’expression collective à travers des conférences immersives. SELMER en propose une expérience plus intime à travers le voyage."
-            />
-            <p className="rounded-lg bg-[#171412] p-8 text-lg leading-8 text-white/78">
-              À travers cette approche, Laila Tazi invite chacun à accomplir ce
-              qu’elle appelle le « Pas Magique », ce premier mouvement intérieur
-              capable de transformer durablement une trajectoire de vie.
-            </p>
+            <blockquote className="mt-8 border-l-2 border-[#be6b41] pl-6 text-2xl font-semibold leading-tight md:text-3xl">
+              Une femme qui a compris que :{" "}
+              <span className="block mt-3 text-[#5f5850]">
+                « Ce ne sont pas les épreuves qui nous transforment, mais les
+                choix que nous faisons après. »
+              </span>
+            </blockquote>
           </div>
         </AnimatedContent>
       </section>
 
       <section
-        id="experiences"
+        id="accompagnements"
         className="bg-[#171412] px-5 py-24 text-white md:py-32"
       >
         <AnimatedContent
@@ -358,37 +401,40 @@ export default function Home() {
           duration={0.9}
           threshold={0.16}
         >
-          <div className="grid gap-6 lg:grid-cols-2">
-            {experiences.map((experience) => (
+          <SectionHeading
+            eyebrow="Accompagnements"
+            title="Comment puis-je vous accompagner ?"
+            text="Les accompagnements proposés par Laila Tazi prennent différentes formes, selon votre situation, votre besoin de transformation et le type d’expérience que vous souhaitez vivre."
+          />
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {supports.map((support) => (
               <article
-                key={experience.name}
-                id={experience.name.toLowerCase()}
+                key={support.name}
                 className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.06] transition duration-300 hover:-translate-y-1 hover:bg-white/[0.09]"
               >
-                <div className="relative aspect-[16/11]">
+                <div className="relative h-[400px]">
                   <Image
-                    src={experience.image}
-                    alt={experience.name}
+                    src={support.image}
+                    alt={support.name}
                     fill
-                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    sizes="(min-width: 768px) 50vw, 100vw"
                     className="object-cover"
                   />
                 </div>
                 <div className="p-8 md:p-10">
                   <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#e7b85f]">
-                    {experience.eyebrow}
+                    {support.name}
                   </p>
-                  <h2 className="mt-4 text-4xl font-semibold">
-                    {experience.name}
-                  </h2>
-                  <h3 className="mt-5 text-2xl font-semibold leading-tight">
-                    {experience.title}
+                  <h3 className="mt-4 text-2xl font-semibold">
+                    {support.subtitle}
                   </h3>
-                  <div className="mt-5 grid gap-5 leading-8 text-white/68">
-                    {experience.text.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
+                  <p className="mt-5 leading-8 text-white/68">{support.text}</p>
+                  <Link
+                    href="#contact"
+                    className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#e7b85f]"
+                  >
+                    {support.action} <ArrowRight className="size-4" />
+                  </Link>
                 </div>
               </article>
             ))}
@@ -396,31 +442,90 @@ export default function Home() {
         </AnimatedContent>
       </section>
 
-      <section className="bg-white px-5 py-24 md:py-32">
+      <section id="experiences" className="bg-white px-5 py-24 md:py-32">
         <AnimatedContent
-          className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2"
+          className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_.8fr] lg:items-center"
           distance={48}
           duration={0.85}
           threshold={0.18}
         >
-          <div className="rounded-lg border border-[#dfd4c2] bg-[#f8f4ec] p-8">
-            <SectionHeading
-              eyebrow="Pourquoi cette approche est unique ?"
-              title="Une approche qui remet la vie en mouvement"
-              text="Elle commence par un mouvement intérieur, remet le lien au centre, transforme les idées en expériences vécues et permet à chacun de retrouver sa capacité d’agir."
-            />
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#be6b41]">
+              La vision
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
+              La Théorie du Mouvement Vivant
+            </h2>
+            <div className="mt-7 grid gap-5 text-lg leading-8 text-[#5f5850]">
+              <p>
+                La Théorie du Mouvement Vivant constitue le socle de la vision
+                de Laila Tazi.
+              </p>
+              <p>
+                Elle repose sur l’idée que la vie n’est pas transformée par les
+                intentions seules, mais par les mouvements que nous décidons
+                d’incarner.
+              </p>
+              <p>
+                Le mouvement peut être intérieur avant de devenir visible :
+                choisir, ressentir, nommer, prendre position, changer de regard
+                ou accomplir un premier pas.
+              </p>
+            </div>
           </div>
-          <div className="rounded-lg border border-[#dfd4c2] bg-[#f8f4ec] p-8">
-            <SectionHeading
-              eyebrow="À qui s’adresse l’expérience ?"
-              title="Cette expérience peut vous parler si…"
-              text="Vous souhaitez retrouver du sens ou de l’élan, traversez une transition, recherchez une expérience qui vous remet en action, souhaitez vivre la force du collectif avec REVEL ou préférez l’intimité d’un voyage avec SELMER."
-            />
+          <div className="rounded-lg bg-[#eadfce] p-8 md:p-10">
+            <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#be6b41]">
+              Le Pas Magique
+            </p>
+            <h3 className="mt-4 text-3xl font-semibold leading-tight">
+              Le premier mouvement qui ouvre une nouvelle trajectoire.
+            </h3>
+            <p className="mt-6 leading-8 text-[#5f5850]">
+              Laila Tazi appelle Pas Magique ce premier mouvement intérieur qui
+              ouvre une nouvelle trajectoire. Il ne garantit pas que tout
+              changera immédiatement. Il marque cependant le moment où une
+              personne cesse d’attendre que sa vie change et commence à
+              reprendre son pouvoir d’action.
+            </p>
           </div>
         </AnimatedContent>
       </section>
 
-      <section id="temoignages" className="px-5 py-24 md:py-32">
+      <section id="agenda" className="px-5 py-24 md:py-32">
+        <AnimatedContent distance={44} duration={0.8} threshold={0.18}>
+          <SectionHeading
+            eyebrow="Agenda"
+            title="Les prochains rendez-vous"
+            text="Des expériences pour se mettre en mouvement, rencontrer, ressentir et faire émerger de nouvelles possibilités."
+          />
+          <div className="mx-auto mt-14 grid max-w-7xl gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {events.map((event, index) => (
+              <article
+                key={event.title}
+                className={`flex min-h-72 flex-col rounded-lg border border-[#dfd4c2] bg-white p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#be6b41]/10 ${index === 0 ? "xl:col-span-2" : ""}`}
+              >
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#be6b41]">
+                  {event.tag}
+                </p>
+                <h3 className="mt-5 text-2xl font-semibold leading-tight">
+                  {event.title}
+                </h3>
+                <p className="mt-4 leading-7 text-[#5f5850]">
+                  {event.description}
+                </p>
+                <Link
+                  href="#contact"
+                  className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-bold"
+                >
+                  Être informé(e) <ArrowRight className="size-4" />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </AnimatedContent>
+      </section>
+
+      <section id="temoignages" className="bg-white px-5 py-24 md:py-32">
         <AnimatedContent distance={44} duration={0.8} threshold={0.18}>
           <SectionHeading
             eyebrow="Témoignages"
@@ -430,7 +535,7 @@ export default function Home() {
             {testimonials.map((testimonial) => (
               <figure
                 key={testimonial.name}
-                className="rounded-lg bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#be6b41]/10"
+                className="rounded-lg bg-[#f8f4ec] p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#be6b41]/10"
               >
                 <blockquote className="text-lg leading-8 text-[#4d463f]">
                   “{testimonial.quote}”
@@ -445,16 +550,18 @@ export default function Home() {
       </section>
 
       <section
-        id="presse"
+        id="medias"
         className="overflow-hidden bg-[#eadfce] py-24 md:py-32"
       >
         <AnimatedContent distance={40} duration={0.8} threshold={0.2}>
-          <SectionHeading
-            eyebrow="Revue de presse"
-            title="Ils parlent de notre vision"
-          />
+          <SectionHeading eyebrow="Médias" title="Ils parlent de la vision" />
         </AnimatedContent>
-        <AnimatedContent distance={28} duration={0.9} threshold={0.12} delay={0.1}>
+        <AnimatedContent
+          distance={28}
+          duration={0.9}
+          threshold={0.12}
+          delay={0.1}
+        >
           <div className="press-marquee mt-14 flex gap-5">
             {[...pressImages, ...pressImages].map((image, index) => (
               <div
@@ -474,40 +581,7 @@ export default function Home() {
         </AnimatedContent>
       </section>
 
-      <section id="blog" className="bg-white px-5 py-24 md:py-32">
-        <AnimatedContent distance={46} duration={0.85} threshold={0.18}>
-          <SectionHeading
-            eyebrow="Blog"
-            title="Réflexions, conseils et actualités"
-            text="Découvrez les réflexions de Laila Tazi autour du mouvement vivant, du leadership, de la reconnexion à soi et des expériences qui transforment une trajectoire."
-          />
-          <div className="mx-auto mt-14 grid max-w-7xl gap-5 md:grid-cols-3">
-            {blogPosts.map((post) => (
-              <article
-                key={post.title}
-                className="flex min-h-72 flex-col rounded-lg border border-[#dfd4c2] p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#be6b41]/10"
-              >
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#be6b41]">
-                  {post.category}
-                </p>
-                <h3 className="mt-5 text-2xl font-semibold leading-tight">
-                  {post.title}
-                </h3>
-                <p className="mt-4 leading-7 text-[#5f5850]">{post.excerpt}</p>
-                <Link
-                  href="#contact"
-                  className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-bold"
-                >
-                  Lire l’article
-                  <ArrowRight className="size-4" />
-                </Link>
-              </article>
-            ))}
-          </div>
-        </AnimatedContent>
-      </section>
-
-      <section id="faq" className="px-5 py-24 md:py-32">
+      <section className="px-5 py-24 md:py-32">
         <AnimatedContent distance={42} duration={0.75} threshold={0.2}>
           <SectionHeading eyebrow="FAQ" title="Vos questions, nos réponses" />
           <Accordion className="mx-auto mt-14 max-w-4xl rounded-lg bg-white px-6 shadow-sm">
@@ -547,9 +621,8 @@ export default function Home() {
               Et si votre premier mouvement commençait ici ?
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/68">
-              Vous souhaitez en savoir plus sur REVEL, SELMER ou une
-              collaboration ? Partagez-nous votre demande. L’équipe vous
-              recontactera avec les informations adaptées.
+              Partagez-nous votre demande. L’équipe vous recontactera avec les
+              informations adaptées à votre besoin.
             </p>
           </div>
           <form className="rounded-lg bg-white p-6 text-[#171412] shadow-2xl md:p-8">
@@ -557,36 +630,54 @@ export default function Home() {
               <h3 className="text-2xl font-semibold">Formulaire de contact</h3>
               <label className="grid gap-2 text-sm font-semibold">
                 Nom complet
-                <input className="h-12 rounded-md border border-[#d9cdbb] px-4 outline-none focus:border-[#be6b41]" />
+                <input
+                  required
+                  className="h-12 rounded-md border border-[#d9cdbb] px-4 outline-none focus:border-[#be6b41]"
+                />
               </label>
               <label className="grid gap-2 text-sm font-semibold">
                 Numéro de téléphone
-                <input className="h-12 rounded-md border border-[#d9cdbb] px-4 outline-none focus:border-[#be6b41]" />
+                <input
+                  type="tel"
+                  className="h-12 rounded-md border border-[#d9cdbb] px-4 outline-none focus:border-[#be6b41]"
+                />
               </label>
               <label className="grid gap-2 text-sm font-semibold">
                 Adresse mail
                 <input
+                  required
                   type="email"
                   className="h-12 rounded-md border border-[#d9cdbb] px-4 outline-none focus:border-[#be6b41]"
                 />
               </label>
-              <div className="grid gap-3 text-sm font-semibold">
-                Je suis :
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {["Un(e) Particulier(e)", "Une entreprise"].map((option) => (
+              <fieldset className="grid gap-3">
+                <legend className="text-sm font-semibold">Votre demande</legend>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {requestChoices.map((choice) => (
                     <label
-                      key={option}
-                      className="flex h-12 items-center gap-3 rounded-md border border-[#d9cdbb] px-4"
+                      key={choice}
+                      className="flex items-start gap-3 rounded-md border border-[#d9cdbb] p-3 text-sm leading-5"
                     >
-                      <input type="radio" name="profile" />
-                      {option}
+                      <input
+                        type="checkbox"
+                        name="request"
+                        value={choice}
+                        className="mt-0.5"
+                      />
+                      <span>{choice}</span>
                     </label>
                   ))}
                 </div>
-              </div>
+              </fieldset>
+              <label className="grid gap-2 text-sm font-semibold">
+                Un message à nous partager
+                <textarea
+                  rows={4}
+                  className="resize-y rounded-md border border-[#d9cdbb] p-4 outline-none focus:border-[#be6b41]"
+                />
+              </label>
               <button className="mt-2 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#171412] px-6 text-sm font-bold text-white transition hover:bg-[#be6b41]">
-                Envoyer ma demande
-                <ArrowRight className="size-4" />
+                Envoyer ma demande <ArrowRight className="size-4" />
               </button>
             </div>
           </form>
@@ -621,7 +712,7 @@ export default function Home() {
           <div>
             <h3 className="font-semibold">Restons en mouvement</h3>
             <p className="mt-4 max-w-md text-sm leading-7 text-white/66">
-              Recevez les prochaines expériences, réflexions et actualités de
+              Recevez les prochains rendez-vous, réflexions et actualités de
               Laila Tazi.
             </p>
             <div className="mt-5 flex max-w-md overflow-hidden rounded-full bg-white">
@@ -633,18 +724,6 @@ export default function Home() {
               <button className="bg-[#e7b85f] px-5 text-sm font-bold text-[#171412]">
                 Je m’inscris
               </button>
-            </div>
-            <h3 className="mt-6 font-semibold">Réseaux sociaux</h3>
-            <div className="mt-6 flex flex-wrap gap-3">
-              {["Instagram", "LinkedIn", "Facebook"].map((network) => (
-                <Link
-                  key={network}
-                  href="#"
-                  className="rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-white/70 transition hover:bg-white hover:text-[#171412]"
-                >
-                  {network}
-                </Link>
-              ))}
             </div>
           </div>
         </AnimatedContent>

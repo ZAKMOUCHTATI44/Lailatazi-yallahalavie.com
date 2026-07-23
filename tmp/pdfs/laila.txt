@@ -1,0 +1,211 @@
+Nouvelle NAV BARRE :
+
+
+Accueil
+Laila Tazi
+Sa vision
+Accompagnements
+Expériences
+Témoignages
+Médias
+Agenda
+Contact
+
+
+
+
+Change les texte :
+01
+Bouge-toi
+02
+Guéris-toi
+03
+Révèle-toi
+
+
+
+
+Changer ce texte :
+
+Laila Tazi crée des expériences immersives et des accompagnements
+transformateurs qui remettent la vie en mouvement.
+
+Elle accompagne celles et ceux qui sont prêts à développer leur Personal Power™,
+afin d’incarner un leadership plus libre, plus aligné, plus charismatique et porteur de
+sens.
+
+
+
+
+Ajoute une section en dessous :
+Titre principal
+Développez votre Personal Power
+
+
+Sous-titre
+Alignez votre posture. Libérez vos freins. Clarifiez votre voix et votre voie. Le
+mouvement suivra.
+
+
+Texte
+Le Personal Power™ désigne la capacité à reprendre pleinement sa place, à
+exprimer ce qui nous anime et à donner une direction consciente à notre vie.
+
+Cette approche repose sur trois dimensions complémentaires.
+
+La posture
+
+La manière dont j’habite mon corps, mes émotions, mon énergie et ma présence.
+
+La voix
+
+La manière dont j’exprime ma vérité, affirme mon message et crée le lien avec les
+autres.
+
+La voie
+
+La direction que je choisis de donner à ma vie, à mes décisions et à mon impact.
+Changer le texte :
+Titre : Qui est Laila Tazi ?
+
+
+
+
+Riche d’une expérience dans l’univers de la cosmétique du luxe, de la croissance de
+l‘être .
+Phare conférencière et activatrice de Transformation- fondatrice de Yallah à la Vie,
+Laila Tazi accompagne celles et ceux qui souhaitent remettre leur vie en mouvement
+et devenir le leader de leur vie.
+Une femme qui a cheminer, connu la performance, la réussite, les pailletés, puis le
+stop, le travail
+
+
+
+
+Titre : Une femme qui a compris que :
+Ce ne sont pas les épreuve qui nous transforment, mais les choix que nous faisons
+après ..
+On va mettre 4 boxe avec un nouveau titre et texte avant :
+
+
+
+
+Titre principal
+Comment puis-je vous accompagner ?
+
+
+Texte
+Les accompagnements proposés par Laila Tazi prennent différentes formes, selon
+votre situation, votre besoin de transformation et le type d’expérience que vous
+souhaitez vivre.
+
+REVEL
+
+Conférences immersives
+
+Pour vivre la puissance du collectif, rencontrer des parcours inspirants et transformer
+une prise de conscience en mouvement.
+
+Bouton : Découvrir REVEL
+
+SELMER
+
+Voyager autrement
+
+Pour ralentir, se reconnecter à soi, retrouver de la clarté et vivre le voyage comme
+une expérience de transformation.
+Bouton : Découvrir SELMER
+
+ENTREPRISES
+
+Leadership et transformation humaine
+
+Pour accompagner les dirigeants, les équipes et les organisations autour de la
+posture, du leadership, du lien, de la communication et de la transformation
+humaine.
+
+LEADER ONE
+
+Personal Branding & Personal Power
+
+Une alliance entre l’expertise de Nawal Houti en Personal Branding et l’approche de
+Laila Tazi autour du Personal Power™.
+
+Un accompagnement destiné aux leaders, dirigeants, entrepreneurs et personnalités
+souhaitant aligner leur image, leur posture, leur voix, leur message et leur impact.
+Enleve cette section et remplace la avec :
+
+
+
+
+Titre principal
+La Théorie du Mouvement Vivant
+
+
+Texte introductif
+La Théorie du Mouvement Vivant constitue le socle de la vision de Laila Tazi.
+
+Elle repose sur l’idée que la vie n’est pas transformée par les intentions seules, mais
+par les mouvements que nous décidons d’incarner.
+
+Le mouvement peut être intérieur avant de devenir visible : choisir, ressentir,
+nommer, prendre position, changer de regard ou accomplir un premier pas.
+Le Pas Magique
+Laila Tazi appelle Pas Magique ce premier mouvement intérieur qui ouvre une
+nouvelle trajectoire.
+
+Il ne garantit pas que tout changera immédiatement. Il marque cependant le moment
+où une personne cesse d’attendre que sa vie change et commence à reprendre son
+pouvoir d’action.
+
+
+
+
+Avant cette section on va ajouter un module EVENTS comme celui de Euromed :
+
+
+
+. Tag : Conférence
+
+Titre : REVEL - Le pouvoir du premier mouvement​
+Description : Une expérience immersive mêlant témoignages, musique, émotion et
+prises de conscience pour retrouver son pouvoir d’action et initier un changement
+durable.
+
+2. Tag : Live
+
+Titre : Et si le véritable leadership commençait par soi ?​
+ Description : Un échange en direct avec Laila Tazi autour du Personal Power™, de
+la posture et des choix qui permettent de devenir pleinement le leader de sa propre
+vie.
+
+3. Tag : Masterclass
+Titre : Aligner sa posture, sa voix et sa voie​
+Description : Une masterclass pour mieux comprendre son positionnement,
+exprimer sa voix avec confiance et donner une direction plus claire à son parcours
+personnel ou professionnel.
+
+4. Tag : Voyage
+
+Titre : SELMER - Revenir à l’essentiel​
+Description : Une expérience en petit groupe pensée pour ralentir, se reconnecter
+à soi et retrouver de la clarté grâce au voyage, au partage et à la nature.
+
+5. Tag : Atelier
+
+Titre : Leadership vivant — Remettre les équipes en mouvement​
+ Description : Un atelier destiné aux dirigeants et aux équipes pour renforcer la
+posture de leadership, améliorer la qualité du lien et favoriser une dynamique
+collective plus engagée.
+Ajoute un boxe avec des choix :
+
+
+Choix proposés
+Participer à une conférence REVEL​
+Candidater à un voyage SELMER​
+Découvrir SELMER One to One​
+Candidater à Leader One​
+Organiser une intervention en entreprise​
+Proposer une collaboration ou une interview​
+Autre demande
+
