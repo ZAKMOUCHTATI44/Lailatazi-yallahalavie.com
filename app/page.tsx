@@ -63,7 +63,7 @@ const supports = [
   {
     name: "LEADER ONE",
     subtitle: "Personal Branding & Personal Power",
-    text: "Une alliance entre l’expertise de Nawal Houti en Personal Branding et l’approche de Laila Tazi autour du Personal Power™. Un accompagnement pour aligner image, posture, voix, message et impact.",
+    text: "Une alliance entre l’expertise de Dr Nawal Houti en Personal Branding et l’approche de Laila Tazi autour du Personal Power™. Un accompagnement pour aligner image, posture, voix, message et impact.",
     action: "Découvrir Leader One",
     image: "/assets/PHOTOS SECTIONS/9.webp",
   },
