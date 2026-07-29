@@ -255,7 +255,7 @@ export default function Home() {
 
       <section
         id="accueil"
-        style={{ backgroundImage: 'url("/assets/hero.png")' }}
+        style={{ backgroundImage: 'url("/Hero Banner.jpeg")' }}
         className="relative flex min-h-[92vh] items-end overflow-hidden bg-sky-100 bg-cover bg-center px-5 pb-16 pt-32 text-[#171412] md:min-h-screen md:pb-24 lg:items-center lg:px-12 xl:px-20"
       >
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(224,242,254,0.96)_0%,rgba(224,242,254,0.76)_34%,rgba(224,242,254,0.24)_62%,rgba(224,242,254,0.02)_100%)]" />
