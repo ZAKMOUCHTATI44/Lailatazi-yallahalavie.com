@@ -41,31 +41,43 @@ const principles = ["Bouge-toi", "Guéris-toi", "Révèle-toi"];
 const supports = [
   {
     name: "REVEL",
-    subtitle: "Conférences immersives",
+    subtitle: "Les conférences immersives",
     text: "Pour vivre la puissance du collectif, rencontrer des parcours inspirants et transformer une prise de conscience en mouvement.",
+    details: [
+      "L’ère des conférences est terminée. L’ère des expériences commence.",
+      "On n’y vient pas seulement pour écouter. On y vient pour vivre un avant et un après.",
+    ],
     action: "Découvrir REVEL",
     image: "/assets/PHOTOS SECTIONS/6.webp",
   },
   {
     name: "SELMER",
     subtitle: "Voyager autrement",
-    text: "Pour ralentir, se reconnecter à soi, retrouver de la clarté et vivre le voyage comme une expérience de transformation.",
+    text: "Certains voyages montrent le monde. D’autres nous révèlent à nous-mêmes.",
+    details: [
+      "Le voyage devient un accélérateur de mouvement.",
+      "Pour ralentir, se reconnecter à soi, retrouver de la clarté et vivre le voyage comme une expérience luxe de transformation.",
+    ],
     action: "Découvrir SELMER",
     image: "/assets/PHOTOS SECTIONS/7.webp",
   },
   {
     name: "ENTREPRISES",
-    subtitle: "Leadership et transformation humaine",
+    subtitle: "Leadership et Transformation humaine",
     text: "Pour accompagner les dirigeants, les équipes et les organisations autour de la posture, du leadership, du lien, de la communication et de la transformation humaine.",
+    details: [],
     action: "Organiser une intervention",
     image: "/assets/PHOTOS SECTIONS/8.webp",
   },
   {
     name: "LEADER ONE",
-    subtitle: "Personal Branding & Personal Power",
-    text: "Une alliance entre l’expertise de Dr Nawal Houti en Personal Branding et l’approche de Laila Tazi autour du Personal Power™. Un accompagnement pour aligner image, posture, voix, message et impact.",
-    action: "Découvrir Leader One",
-    image: "/assets/PHOTOS SECTIONS/9.webp",
+    subtitle: "Personal Branding & Personal Power™",
+    text: "Une alliance entre l’expertise de Dr Nawal Houti et de la théorie du Mouvement par Laila Tazi pour révéler le Personal Power. Un accompagnement premium pour aligner posture, voix, message & impact.",
+    details: [
+      "Le Personal Branding sans Personal Power devient du marketing. Le Personal Power sans visibilité reste invisible.",
+    ],
+    action: "Découvrir leader one",
+    image: "/assets/about-us.webp",
   },
 ];
 
@@ -143,15 +155,19 @@ const requestChoices = [
 const faqs = [
   [
     "Qu’est-ce que le Personal Power™ ?",
-    "Le Personal Power™ désigne la capacité à reprendre pleinement sa place, à exprimer ce qui nous anime et à donner une direction consciente à notre vie.",
+    "Le Personal Power™, c’est le moment où tu cesses de subir ta vie pour commencer à la choisir. C’est cette force intérieure qui te permet de reprendre la responsabilité de tes choix, d’aligner ta posture, de libérer ta voix et de clarifier ta voie. Lorsque ces trois dimensions s’alignent, tu retrouves ton pouvoir d’agir. Le Personal Power™ est le fil invisible qui relie ton corps, tes émotions et le sens que tu donnes à ta vie. Il s’exprime ensuite à travers trois dimensions : ta posture, ta voix, ta voie.",
   ],
   [
     "Quelle est la différence entre REVEL et SELMER ?",
-    "REVEL propose des conférences immersives portées par la force du collectif. SELMER transforme le voyage en une expérience intime de reconnexion et de transformation personnelle.",
+    "REVEL et SELMER ne sont pas deux offres séparées. Ce sont deux portes d’entrée dans l’univers YALLAH À LA VIE. REVEL : une conférence immersive qui provoque un déclic et remet la vie en mouvement grâce à la puissance du collectif. SELMER permet d’aller plus loin : le voyage devient un espace de transformation, de ralentissement et d’intégration. Pour celles et ceux qui souhaitent un accompagnement d’exception, Leader One propose une expérience premium et personnalisée.",
   ],
   [
-    "À qui s’adressent les accompagnements ?",
-    "Aux personnes, leaders, entrepreneurs, équipes et organisations qui souhaitent remettre du mouvement, de la clarté et de l’alignement dans leur parcours.",
+    "À qui s’adressent les expériences ?",
+    "À celles et ceux qui ont décidé d’investir en eux-mêmes. À celles et ceux qui sont prêts à être honnêtes avec eux-mêmes. À celles et ceux qui ne veulent plus subir leur vie mais la choisir. À celles et ceux qui savent que personne ne fera le premier pas à leur place. Parce que rien ne bouge tant que nous ne bougeons pas.",
+  ],
+  [
+    "Comment se déroule le parcours YALLAH À LA VIE ?",
+    "Il n’existe pas de parcours unique. Chaque personne entre là où elle en est, selon ce qu’elle traverse et ce dont elle a besoin aujourd’hui. Bouge-toi. Guéris-toi. Révèle-toi. Ce ne sont pas trois étapes que l’on franchit une fois pour toutes, c’est un mouvement vivant. Au fil de la vie, nous sommes tous amenés à bouger, guérir et nous révéler, encore et encore, dans des domaines différents : notre santé, nos relations, notre leadership, notre famille, notre entreprise ou notre mission de vie. Chaque expérience YALLAH À LA VIE répond à un moment particulier de ce chemin.",
   ],
 ];
 
@@ -226,7 +242,7 @@ export default function Home() {
 
       <section
         id="accueil"
-        style={{ backgroundImage: 'url("/hero.png")' }}
+        style={{ backgroundImage: 'url("/assets/hero.png")' }}
         className="relative flex min-h-[92vh] items-end overflow-hidden bg-sky-100 bg-cover bg-center px-5 pb-16 pt-32 text-[#171412] md:min-h-screen md:pb-24 lg:items-center lg:px-12 xl:px-20"
       >
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(224,242,254,0.96)_0%,rgba(224,242,254,0.76)_34%,rgba(224,242,254,0.24)_62%,rgba(224,242,254,0.02)_100%)]" />
@@ -241,23 +257,29 @@ export default function Home() {
             <Sparkles className="size-4 text-[#be6b41]" /> Le leader de ta vie,
             c’est toi.
           </p>
-          <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] md:text-7xl">
-            La vie répond au mouvement.
+          <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] md:text-6xl">
+            Arrête d’attendre que ta vie change.
           </h1>
+          <p className="mt-5 text-2xl font-semibold leading-tight text-[#171412] md:text-3xl">
+            Rien ne change tant que rien ne bouge !
+          </p>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-[#35515d]">
             Laila Tazi crée des expériences immersives et des accompagnements
             transformateurs qui remettent la vie en mouvement.
           </p>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-[#35515d]">
             Elle accompagne celles et ceux qui sont prêts à développer leur
-            Personal Power™, afin d’incarner un leadership plus libre, plus
-            aligné, plus charismatique et porteur de sens.
+            Personal Power™, retrouver leur pouvoir d’action et incarner un
+            leadership libre, charismatique et porteur de sens.
+          </p>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-[#35515d]">
+            Le premier mouvement commence maintenant.
           </p>
           <Link
             href="#accompagnements"
             className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#171412] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#be6b41]"
           >
-            Découvrir les accompagnements <ArrowRight className="size-4" />
+            Découvrir les expériences <ArrowRight className="size-4" />
           </Link>
         </AnimatedContent>
       </section>
@@ -266,8 +288,41 @@ export default function Home() {
         <AnimatedContent distance={46} duration={0.8} threshold={0.2}>
           <SectionHeading
             eyebrow="Sa vision"
-            title="Trois invitations à remettre la vie en mouvement"
+            title="Trois Clefs pour remettre la vie en Mouvement"
           />
+        </AnimatedContent>
+        <AnimatedContent
+          className="mx-auto mt-14 max-w-3xl text-lg leading-8 text-[#5f5850]"
+          distance={32}
+          duration={0.8}
+          threshold={0.18}
+        >
+          <h3 className="text-2xl font-semibold text-[#171412]">
+            SI TU ES ICI…
+          </h3>
+          <div className="mt-6 grid gap-5">
+            <p>
+              Peut-être que tu as déjà beaucoup lu.
+              <br />
+              Peut-être que tu comprends déjà beaucoup de choses.
+              <br />
+              Peut-être que tu attends encore le bon moment.
+            </p>
+            <p>
+              Mais comprendre ne suffit pas.
+              <br />
+              La vie répond au mouvement.
+            </p>
+            <p>
+              Le changement ne commence pas lorsque la vie devient parfaite. Il
+              commence lorsque tu décides de faire ton premier pas.
+            </p>
+            <p>
+              Ici, nous ne cherchons pas la transformation parfaite.
+              <br />
+              Nous créons le mouvement.
+            </p>
+          </div>
         </AnimatedContent>
         <AnimatedContent
           distance={34}
@@ -302,7 +357,7 @@ export default function Home() {
         >
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-[#ddd0bd]">
             <Image
-              src="/assets/PHOTOS SECTIONS/1.webp"
+              src="/assets/Personal Power.jpeg"
               alt="Une expérience Laila Tazi"
               fill
               sizes="(min-width: 1024px) 42vw, 100vw"
@@ -317,29 +372,25 @@ export default function Home() {
               Développez votre Personal Power
             </h2>
             <p className="mt-6 text-xl leading-8 text-[#5f5850]">
-              Alignez votre posture. Libérez vos freins. Clarifiez votre voix et
-              votre voie. Le mouvement suivra.
+              Alignez votre posture.
+              <br />
+              Libérez vos freins.
+              <br />
+              Clarifiez votre voix &amp; voie.
+              <br />
+              Le mouvement suivra.
             </p>
             <p className="mt-6 leading-8 text-[#5f5850]">
               Le Personal Power™ désigne la capacité à reprendre pleinement sa
-              place, à exprimer ce qui nous anime et à donner une direction
-              consciente à notre vie. Cette approche repose sur trois dimensions
-              complémentaires.
+              place, exprimer ce qui nous anime et à donner une direction
+              consciente à notre vie. Cette approche repose sur 3 équilibres
+              essentiels :
             </p>
             <div className="mt-8 grid gap-5 sm:grid-cols-3">
               {[
-                [
-                  "La posture",
-                  "La manière dont j’habite mon corps, mes émotions, mon énergie et ma présence.",
-                ],
-                [
-                  "La voix",
-                  "La manière dont j’exprime ma vérité, affirme mon message et crée le lien avec les autres.",
-                ],
-                [
-                  "La voie",
-                  "La direction que je choisis de donner à ma vie, à mes décisions et à mon impact.",
-                ],
+                ["La vitalité du corps", ""],
+                ["L’équilibre émotionnel", ""],
+                ["Le sens que nous donnons à notre vie", ""],
               ].map(([title, text]) => (
                 <div key={title} className="border-l-2 border-[#be6b41] pl-4">
                   <h3 className="font-semibold">{title}</h3>
@@ -362,7 +413,7 @@ export default function Home() {
         >
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-[#ddd0bd]">
             <Image
-              src="/assets/PHOTOS SECTIONS/2.webp"
+              src="/assets/QUI EST LAILA TAZI.jpeg"
               alt="Laila Tazi"
               fill
               sizes="(min-width: 1024px) 42vw, 100vw"
@@ -379,33 +430,43 @@ export default function Home() {
             <div className="mt-8 grid gap-5 leading-8 text-[#5f5850]">
               <p>
                 Riche d’une expérience dans l’univers de la cosmétique du luxe
-                et de la croissance de l’être, Laila Tazi est une conférencière
-                phare et activatrice de transformation.
+                et de la croissance de l’être, Laila Tazi est une phare
+                conférencière et activatrice de transformation.
               </p>
               <p>
                 Fondatrice de YALLAH À LA VIE, elle accompagne celles et ceux
                 qui souhaitent remettre leur vie en mouvement et devenir le
                 leader de leur vie.
               </p>
-              <p>
-                Une femme qui a cheminé, connu la performance, la réussite, les
-                paillettes, puis le stop et le travail intérieur.
-              </p>
             </div>
             <blockquote className="mt-8 border-l-2 border-[#be6b41] pl-6 text-2xl font-semibold leading-tight md:text-3xl">
               Une femme qui a compris que :{" "}
               <span className="block mt-3 text-[#5f5850]">
-                « Ce ne sont pas les épreuves qui nous transforment, mais les
-                choix que nous faisons après. »
+                Ce ne sont pas les épreuves qui nous transforment,
+                <br />
+                Ce sont les choix que nous faisons après. »
               </span>
             </blockquote>
+            <div className="mt-8 grid gap-5 leading-8 text-[#5f5850]">
+              <p>
+                De cette conviction naît YALLAH À LA VIE. Aujourd’hui, Laila
+                Tazi crée des expériences immersives qui permettent à chacun de
+                reprendre sa responsabilité, retrouver son mouvement et révéler
+                son leadership.
+              </p>
+              <p>
+                Son approche est nourrie par les neurosciences, la régulation
+                émotionnelle, l’hypnose, la méditation, le mouvement, la voix et
+                différentes approches de la croissance humaine.
+              </p>
+            </div>
           </div>
         </AnimatedContent>
       </section>
 
       <section
         id="accompagnements"
-        className="bg-[#171412] px-5 py-24 text-white md:py-32"
+        className="bg-[#f1e8da] px-5 py-24 text-[#171412] md:py-32"
       >
         <AnimatedContent
           className="mx-auto max-w-7xl"
@@ -416,15 +477,15 @@ export default function Home() {
           <SectionHeading
             eyebrow="Accompagnements"
             title="Comment puis-je vous accompagner ?"
-            text="Les accompagnements proposés par Laila Tazi prennent différentes formes, selon votre situation, votre besoin de transformation et le type d’expérience que vous souhaitez vivre."
+            text="Chaque expérience est une porte d’entrée différente vers une même transformation. Redevenir leader de sa vie."
           />
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             {supports.map((support) => (
               <article
                 key={support.name}
-                className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.06] transition duration-300 hover:-translate-y-1 hover:bg-white/[0.09]"
+                className="overflow-hidden rounded-lg border border-[#dfd4c2] bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#be6b41]/10"
               >
-                <div className="relative h-[400px]">
+                <div className="relative h-[600px]">
                   <Image
                     src={support.image}
                     alt={support.name}
@@ -434,16 +495,23 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-8 md:p-10">
-                  <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#e7b85f]">
+                  <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#be6b41]">
                     {support.name}
                   </p>
                   <h3 className="mt-4 text-2xl font-semibold">
                     {support.subtitle}
                   </h3>
-                  <p className="mt-5 leading-8 text-white/68">{support.text}</p>
+                  <p className="mt-5 leading-8 text-[#5f5850]">
+                    {support.text}
+                  </p>
+                  {support.details.map((detail) => (
+                    <p key={detail} className="mt-4 leading-8 text-[#5f5850]">
+                      {detail}
+                    </p>
+                  ))}
                   <Link
                     href="#contact"
-                    className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#e7b85f]"
+                    className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#171412] hover:text-[#be6b41]"
                   >
                     {support.action} <ArrowRight className="size-4" />
                   </Link>
@@ -463,25 +531,42 @@ export default function Home() {
         >
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#be6b41]">
-              La vision
+              La Théorie du Mouvement
             </p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
-              La Théorie du Mouvement Vivant
+              La Théorie du Mouvement
             </h2>
             <div className="mt-7 grid gap-5 text-lg leading-8 text-[#5f5850]">
               <p>
-                La Théorie du Mouvement Vivant constitue le socle de la vision
-                de Laila Tazi.
+                La vie ne répond pas seulement aux intentions.
+                <br />
+                Elle répond au mouvement.
               </p>
               <p>
-                Elle repose sur l’idée que la vie n’est pas transformée par les
-                intentions seules, mais par les mouvements que nous décidons
-                d’incarner.
+                La Théorie du Mouvement constitue le socle de la vision de Laila
+                Tazi. Elle repose sur l’idée que la vie n’est pas transformée
+                par les intentions seules, mais par les mouvements que nous
+                décidons d’incarner.
               </p>
               <p>
                 Le mouvement peut être intérieur avant de devenir visible :
                 choisir, ressentir, nommer, prendre position, changer de regard
                 ou accomplir un premier pas.
+              </p>
+              <p>
+                Un mouvement peut être invisible.
+                <br />
+                Une décision.
+                <br />
+                Une limite posée.
+                <br />
+                Une vérité enfin exprimée.
+                <br />
+                Un choix courageux.
+                <br />
+                Un premier PAS.
+                <br />
+                Chaque mouvement transforme une trajectoire.
               </p>
             </div>
           </div>
@@ -493,8 +578,8 @@ export default function Home() {
               Le premier mouvement qui ouvre une nouvelle trajectoire.
             </h3>
             <p className="mt-6 leading-8 text-[#5f5850]">
-              Laila Tazi appelle Pas Magique ce premier mouvement intérieur qui
-              ouvre une nouvelle trajectoire. Il ne garantit pas que tout
+              Laila Tazi appelle « Pas Magic » ce premier mouvement intérieur
+              qui ouvre une nouvelle trajectoire. Il ne garantit pas que tout
               changera immédiatement. Il marque cependant le moment où une
               personne cesse d’attendre que sa vie change et commence à
               reprendre son pouvoir d’action.
@@ -507,8 +592,8 @@ export default function Home() {
         <AnimatedContent distance={44} duration={0.8} threshold={0.18}>
           <SectionHeading
             eyebrow="Agenda"
-            title="Les prochains rendez-vous"
-            text="Des expériences pour se mettre en mouvement, rencontrer, ressentir et faire émerger de nouvelles possibilités."
+            title="Les prochaines RENDEZ-VOUS."
+            text="Les prochaines conférences. Les prochains Voyages. Les prochaines rencontres. Ton prochain mouvement commence peut-être ici."
           />
           <div className="mx-auto mt-14 grid max-w-7xl gap-4 md:grid-cols-2 xl:grid-cols-3">
             {events.map((event, index) => {
@@ -550,7 +635,7 @@ export default function Home() {
         <AnimatedContent distance={44} duration={0.8} threshold={0.18}>
           <SectionHeading
             eyebrow="Témoignages"
-            title="Ils ont remis leur vie en mouvement"
+            title="Ils n’ont pas changé de vie par hasard. Ils ont commencé par changer leur premier PAS."
           />
           <div className="mx-auto mt-14 grid max-w-7xl gap-5 md:grid-cols-3">
             {testimonials.map((testimonial) => (
@@ -575,7 +660,11 @@ export default function Home() {
         className="overflow-hidden bg-[#eadfce] py-24 md:py-32"
       >
         <AnimatedContent distance={40} duration={0.8} threshold={0.2}>
-          <SectionHeading eyebrow="Médias" title="Ils parlent de la vision" />
+          <SectionHeading
+            eyebrow="Médias"
+            title="Ils parlent d’une Femme - Vision - Décision"
+            text="Ils parlent surtout d’un mouvement."
+          />
         </AnimatedContent>
         <AnimatedContent
           distance={28}
