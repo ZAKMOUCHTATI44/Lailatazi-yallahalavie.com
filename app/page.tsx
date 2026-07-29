@@ -36,7 +36,20 @@ const navItems = [
 
 const footerNavItems = navItems.slice(1);
 
-const principles = ["Bouge-toi", "Guéris-toi", "Révèle-toi"];
+const principles = [
+  {
+    name: "Bouge-toi",
+    image: "/assets/Vision - Bouge Toi.jpeg",
+  },
+  {
+    name: "Guéris-toi",
+    image: "/assets/Vision - Gueri Toi.jpeg",
+  },
+  {
+    name: "Révèle-toi",
+    image: "/assets/Vision - Revele Toi.jpeg",
+  },
+];
 
 const supports = [
   {
@@ -333,15 +346,26 @@ export default function Home() {
           <div className="mx-auto mt-14 grid max-w-6xl gap-4 md:grid-cols-3">
             {principles.map((principle, index) => (
               <div
-                key={principle}
-                className="rounded-lg border border-[#dfd4c2] bg-white/70 p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#be6b41]/10"
+                key={principle.name}
+                className="overflow-hidden rounded-lg border border-[#dfd4c2] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#be6b41]/10"
               >
-                <span className="text-sm font-bold text-[#be6b41]">
-                  0{index + 1}
-                </span>
-                <h3 className="mt-8 text-2xl font-semibold leading-tight">
-                  {principle}
-                </h3>
+                <div className="relative aspect-[4/3] bg-[#ddd0bd]">
+                  <Image
+                    src={principle.image}
+                    alt={principle.name}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-7">
+                  <span className="text-sm font-bold text-[#be6b41]">
+                    0{index + 1}
+                  </span>
+                  <h3 className="mt-5 text-2xl font-semibold leading-tight">
+                    {principle.name}
+                  </h3>
+                </div>
               </div>
             ))}
           </div>
