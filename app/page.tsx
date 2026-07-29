@@ -200,7 +200,7 @@ function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-3xl font-semibold leading-tight text-[#171412] md:text-5xl">
+      <h2 className="text-4xl font-semibold leading-tight text-[#171412] md:text-6xl">
         {title}
       </h2>
       {text ? (
@@ -359,10 +359,10 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-7">
-                  <span className="text-sm font-bold text-[#be6b41]">
+                  <span className="text-xl font-bold text-[#be6b41]">
                     0{index + 1}
                   </span>
-                  <h3 className="mt-5 text-2xl font-semibold leading-tight">
+                  <h3 className="mt-5 text-3xl font-semibold leading-tight">
                     {principle.name}
                   </h3>
                 </div>
@@ -468,7 +468,7 @@ export default function Home() {
               <span className="block mt-3 text-[#5f5850]">
                 Ce ne sont pas les épreuves qui nous transforment,
                 <br />
-                Ce sont les choix que nous faisons après. »
+                Ce sont les choix que nous faisons après.
               </span>
             </blockquote>
             <div className="mt-8 grid gap-5 leading-8 text-[#5f5850]">
@@ -522,14 +522,14 @@ export default function Home() {
                   <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#be6b41]">
                     {support.name}
                   </p>
-                  <h3 className="mt-4 text-2xl font-semibold">
+                  <h3 className="mt-4 text-3xl font-semibold">
                     {support.subtitle}
                   </h3>
-                  <p className="mt-5 leading-8 text-[#5f5850]">
+                  <p className="mt-5 text-lg leading-8 text-[#5f5850]">
                     {support.text}
                   </p>
                   {support.details.map((detail) => (
-                    <p key={detail} className="mt-4 leading-8 text-[#5f5850]">
+                    <p key={detail} className="mt-4 text-lg leading-8 text-[#5f5850]">
                       {detail}
                     </p>
                   ))}
@@ -686,8 +686,8 @@ export default function Home() {
         <AnimatedContent distance={40} duration={0.8} threshold={0.2}>
           <SectionHeading
             eyebrow="Médias"
-            title="Ils parlent d’une Femme - Vision - Décision"
-            text="Ils parlent surtout d’un mouvement."
+            title="Ils parlent d’une Femme, d’une Vision, d’une décision"
+            text="Ils parlent surtout d’un mouvement !"
           />
         </AnimatedContent>
         <AnimatedContent
@@ -826,14 +826,16 @@ export default function Home() {
           threshold={0.12}
         >
           <div>
-            <Image
-              src="/logo.webp"
-              alt="YALLAH À LA VIE"
-              width={250}
-              height={250}
-              priority
-              className="size-36 object-contain"
-            />
+            <div className="inline-flex rounded-2xl bg-[#f8f4ec] p-3">
+              <Image
+                src="/logo.webp"
+                alt="YALLAH À LA VIE"
+                width={250}
+                height={250}
+                priority
+                className="size-36 object-contain"
+              />
+            </div>
             <p className="mt-5 text-white/66">
               La vie répond au mouvement.
               <br />
@@ -917,13 +919,15 @@ export default function Home() {
           threshold={0.1}
           delay={0.1}
         >
-          <Image
-            src="/logo.webp"
-            alt="YALLAH À LA VIE"
-            width={96}
-            height={96}
-            className="size-24 object-contain"
-          />
+          <div className="rounded-xl bg-[#f8f4ec] p-2">
+            <Image
+              src="/logo.webp"
+              alt="YALLAH À LA VIE"
+              width={96}
+              height={96}
+              className="size-24 object-contain"
+            />
+          </div>
         </AnimatedContent>
       </footer>
     </main>
