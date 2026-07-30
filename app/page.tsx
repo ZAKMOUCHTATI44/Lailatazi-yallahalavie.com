@@ -358,11 +358,11 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-7">
-                  <span className="text-3xl font-bold text-[#be6b41]">
+                <div className="p-7 text-center">
+                  <span className="font-serif text-6xl font-normal leading-none text-[#e8dfd0] md:text-7xl">
                     0{index + 1}
                   </span>
-                  <h3 className="mt-5 text-3xl font-semibold leading-tight">
+                  <h3 className="mt-4 text-3xl font-semibold leading-tight">
                     {principle.name}
                   </h3>
                 </div>
