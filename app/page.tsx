@@ -538,9 +538,13 @@ export default function Home() {
                   ))}
                   <Link
                     href="#contact"
-                    className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#171412] hover:text-[#be6b41]"
+                    className="mt-8 inline-flex items-center justify-between gap-4 rounded-xl border border-[#dfd4c2] bg-[#ca9a47] px-6 py-2 font-semibold text-[#171412] transition-all duration-300 hover:border-[#be6b41] hover:bg-[#be6b41] hover:text-white group"
                   >
-                    {support.action} <ArrowRight className="size-4" />
+                    <span>{support.action}</span>
+
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#be6b41] transition-colors group-hover:bg-white/20 group-hover:text-white">
+                      <ArrowRight className="size-5" />
+                    </span>
                   </Link>
                 </div>
               </article>
