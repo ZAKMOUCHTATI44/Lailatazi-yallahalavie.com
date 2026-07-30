@@ -301,7 +301,7 @@ export default function Home() {
         <AnimatedContent distance={46} duration={0.8} threshold={0.2}>
           <SectionHeading
             eyebrow="Sa vision"
-            title="Trois Clefs pour remettre la vie en Mouvement"
+            title="Trois clefs pour remettre la vie en mouvement"
           />
         </AnimatedContent>
         <AnimatedContent
