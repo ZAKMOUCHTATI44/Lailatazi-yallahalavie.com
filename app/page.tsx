@@ -196,7 +196,7 @@ function SectionHeading({
   return (
     <div className="mx-auto max-w-3xl text-center">
       {eyebrow ? (
-        <p className="mb-4 text-xs font-bold uppercase tracking-[0.26em] text-[#be6b41]">
+        <p className="mb-4 text-xl font-bold uppercase tracking-[0.26em] text-[#be6b41]">
           {eyebrow}
         </p>
       ) : null}
@@ -204,7 +204,7 @@ function SectionHeading({
         {title}
       </h2>
       {text ? (
-        <p className="mt-6 text-base leading-8 text-[#5f5850] md:text-lg">
+        <p className="mt-6 text-2xl leading-8 text-[#5f5850] md:text-lg">
           {text}
         </p>
       ) : null}
@@ -359,7 +359,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-7">
-                  <span className="text-xl font-bold text-[#be6b41]">
+                  <span className="text-3xl font-bold text-[#be6b41]">
                     0{index + 1}
                   </span>
                   <h3 className="mt-5 text-3xl font-semibold leading-tight">
@@ -519,7 +519,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-8 md:p-10">
-                  <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#be6b41]">
+                  <p className="text-xl font-bold uppercase tracking-[0.24em] text-[#be6b41]">
                     {support.name}
                   </p>
                   <h3 className="mt-4 text-3xl font-semibold">
@@ -529,7 +529,10 @@ export default function Home() {
                     {support.text}
                   </p>
                   {support.details.map((detail) => (
-                    <p key={detail} className="mt-4 text-lg leading-8 text-[#5f5850]">
+                    <p
+                      key={detail}
+                      className="mt-4 text-lg leading-8 text-[#5f5850]"
+                    >
                       {detail}
                     </p>
                   ))}
