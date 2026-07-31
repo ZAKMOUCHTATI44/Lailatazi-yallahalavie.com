@@ -139,6 +139,11 @@ const testimonials = [
     name: "Younes",
   },
   {
+    qoute:
+      "Bcp de choses ont remué ! Puissant, intérressant et hyper stimulant, une inondation !",
+    name: "-Virginie.S (Conférence de Biarritz (France))",
+  },
+  {
     quote:
       "Ce voyage m’a permis de ralentir, de me reconnecter à moi-même et de voir certaines étapes de ma vie avec plus de clarté. La force du groupe a rendu cette expérience encore plus enrichissante.",
     name: "Imane",
