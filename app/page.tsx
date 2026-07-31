@@ -139,7 +139,7 @@ const testimonials = [
     name: "Younes",
   },
   {
-    qoute:
+    quote:
       "Bcp de choses ont remué ! Puissant, intérressant et hyper stimulant, une inondation !",
     name: "-Virginie.S (Conférence de Biarritz (France))",
   },
@@ -673,7 +673,7 @@ export default function Home() {
             eyebrow="Témoignages"
             title="Ils n’ont pas changé de vie par hasard. Ils ont commencé par changer leur premier PAS."
           />
-          <div className="mx-auto mt-14 grid max-w-7xl gap-5 md:grid-cols-3">
+          <div className="mx-auto mt-14 grid max-w-7xl gap-5 md:grid-cols-2">
             {testimonials.map((testimonial) => (
               <figure
                 key={testimonial.name}
