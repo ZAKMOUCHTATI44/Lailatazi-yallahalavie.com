@@ -140,7 +140,7 @@ const testimonials = [
   },
   {
     quote:
-      "Bcp de choses ont remué ! Puissant, intérressant et hyper stimulant, une inondation !",
+      "Beaucoup de choses ont remué ! Puissant, intérressant et hyper stimulant, une inondation !",
     name: "-Virginie.S (Conférence de Biarritz (France))",
   },
   {
