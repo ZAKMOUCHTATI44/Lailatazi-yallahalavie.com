@@ -21,6 +21,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import ContactForm from "@/components/ContactForm";
 
 const navItems = [
   ["Accueil", "#accueil"],
@@ -771,62 +772,7 @@ export default function Home() {
               informations adaptées à votre besoin.
             </p>
           </div>
-          <form className="rounded-lg bg-white p-6 text-[#171412] shadow-2xl md:p-8">
-            <div className="grid gap-5">
-              <h3 className="text-2xl font-semibold">Formulaire de contact</h3>
-              <label className="grid gap-2 text-sm font-semibold">
-                Nom complet
-                <input
-                  required
-                  className="h-12 rounded-md border border-[#d9cdbb] px-4 outline-none focus:border-[#be6b41]"
-                />
-              </label>
-              <label className="grid gap-2 text-sm font-semibold">
-                Numéro de téléphone
-                <input
-                  type="tel"
-                  className="h-12 rounded-md border border-[#d9cdbb] px-4 outline-none focus:border-[#be6b41]"
-                />
-              </label>
-              <label className="grid gap-2 text-sm font-semibold">
-                Adresse mail
-                <input
-                  required
-                  type="email"
-                  className="h-12 rounded-md border border-[#d9cdbb] px-4 outline-none focus:border-[#be6b41]"
-                />
-              </label>
-              <fieldset className="grid gap-3">
-                <legend className="text-sm font-semibold">Votre demande</legend>
-                <div className="grid gap-2 sm:grid-cols-2">
-                  {requestChoices.map((choice) => (
-                    <label
-                      key={choice}
-                      className="flex items-start gap-3 rounded-md border border-[#d9cdbb] p-3 text-sm leading-5"
-                    >
-                      <input
-                        type="checkbox"
-                        name="request"
-                        value={choice}
-                        className="mt-0.5"
-                      />
-                      <span>{choice}</span>
-                    </label>
-                  ))}
-                </div>
-              </fieldset>
-              <label className="grid gap-2 text-sm font-semibold">
-                Un message à nous partager
-                <textarea
-                  rows={4}
-                  className="resize-y rounded-md border border-[#d9cdbb] p-4 outline-none focus:border-[#be6b41]"
-                />
-              </label>
-              <button className="mt-2 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#171412] px-6 text-sm font-bold text-white transition hover:bg-[#be6b41]">
-                Envoyer ma demande <ArrowRight className="size-4" />
-              </button>
-            </div>
-          </form>
+          <ContactForm />
         </AnimatedContent>
       </section>
 
