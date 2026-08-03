@@ -200,7 +200,7 @@ function SectionHeading({
   text?: string;
 }) {
   return (
-    <div className="mx-auto max-w-3xl text-center">
+    <div className="mx-auto container text-center">
       {eyebrow ? (
         <p className="mb-4 text-2xl font-bold uppercase tracking-[0.26em] text-[#be6b41]">
           {eyebrow}
