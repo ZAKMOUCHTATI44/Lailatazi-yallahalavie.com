@@ -202,7 +202,7 @@ function SectionHeading({
   return (
     <div className="mx-auto max-w-3xl text-center">
       {eyebrow ? (
-        <p className="mb-4 text-xl font-bold uppercase tracking-[0.26em] text-[#be6b41]">
+        <p className="mb-4 text-2xl font-bold uppercase tracking-[0.26em] text-[#be6b41]">
           {eyebrow}
         </p>
       ) : null}
@@ -395,7 +395,7 @@ export default function Home() {
             />
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#be6b41]">
+            <p className="text-2xl font-bold uppercase tracking-[0.26em] text-[#be6b41]">
               Personal Power™
             </p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
@@ -629,7 +629,7 @@ export default function Home() {
         <AnimatedContent distance={44} duration={0.8} threshold={0.18}>
           <SectionHeading
             eyebrow="Agenda"
-            title="Les prochaines RENDEZ-VOUS."
+            title="Les prochains RENDEZ-VOUS."
             text="Les prochaines conférences. Les prochains Voyages. Les prochaines rencontres. Ton prochain mouvement commence peut-être ici."
           />
           <div className="mx-auto mt-14 grid max-w-7xl gap-4 md:grid-cols-2 xl:grid-cols-3">
