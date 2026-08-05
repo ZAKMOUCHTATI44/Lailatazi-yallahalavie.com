@@ -252,7 +252,7 @@ export default function Home() {
           </NavigationMenu>
           <Link
             href="#contact"
-            className="rounded-full bg-[#171412] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#be6b41] sm:text-sm"
+            className="rounded-full bg-[#171412] px-4 py-2 text-xl font-bold text-white transition hover:bg-[#be6b41] sm:text-sm"
           >
             Prendre contact
           </Link>
@@ -451,7 +451,7 @@ export default function Home() {
             />
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#be6b41]">
+            <p className="text-xl font-bold uppercase tracking-[0.26em] text-[#be6b41]">
               Laila Tazi
             </p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
@@ -505,7 +505,7 @@ export default function Home() {
           threshold={0.16}
         >
           <SectionHeading
-            eyebrow="Accompagnements"
+            eyebrow="Accompagnement"
             title="Comment puis-je vous accompagner ?"
             text="Chaque expérience est une porte d’entrée différente vers une même transformation. Redevenir leader de sa vie."
           />
@@ -567,7 +567,7 @@ export default function Home() {
           threshold={0.18}
         >
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#be6b41]">
+            <p className="text-xl font-bold uppercase tracking-[0.26em] text-[#be6b41]">
               La Théorie du Mouvement
             </p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
@@ -608,7 +608,7 @@ export default function Home() {
             </div>
           </div>
           <div className="rounded-lg bg-[#eadfce] p-8 md:p-10">
-            <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#be6b41]">
+            <p className="text-xl font-bold uppercase tracking-[0.26em] text-[#be6b41]">
               Le Pas Magique
             </p>
             <h3 className="mt-4 text-3xl font-semibold leading-tight">
@@ -642,7 +642,7 @@ export default function Home() {
                   className={`flex min-h-72 flex-col rounded-lg border border-[#dfd4c2] bg-white p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#be6b41]/10 ${index === 0 ? "xl:col-span-2" : ""}`}
                 >
                   <div className="flex items-center justify-between gap-4">
-                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#be6b41]">
+                    <p className="text-xl font-bold uppercase tracking-[0.22em] text-[#be6b41]">
                       {event.tag}
                     </p>
                     <span className="grid size-11 place-items-center rounded-full bg-[#f8f4ec] text-[#be6b41]">
@@ -761,7 +761,7 @@ export default function Home() {
           threshold={0.18}
         >
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#e7b85f]">
+            <p className="text-xl font-bold uppercase tracking-[0.26em] text-[#e7b85f]">
               Contact
             </p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
